@@ -2,15 +2,15 @@ package jp.techacademy.masaki.tsumori.kotlinlog
 
 import android.util.Log
 
-open class Human: Animal, Thinkable {
-    constructor(name: String, age: Int, hobby: String): super(name, age, hobby) {
-    }
+class Human(name: String, age: Int, var hobby: String): Animal(name, age), Thinkable {
 
     override fun say() {
+
         Log.d("kotlintest", "私の名前は" + this.name + "です。　年は" + this.age + "歳です。")
     }
 
     override fun think() {
+
         Log.d("kotlintest", "「私は" + this.hobby + "について考える。」")
     }
 }
